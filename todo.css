@@ -1,0 +1,35 @@
+.item-input {
+    outline: 0px;
+    border: 0px;
+    font-size: 44px;
+    display: block;
+    background-color: rgb(117, 119, 122);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    text-align: center;
+}
+
+.custom-background {
+    background-color: rgb(117, 119, 122);
+}
+
+.search-box {
+    border: 1px solid grey;
+    outline: 0px;
+}
+input:focus {
+    outline: none;
+}
+
+.hide {
+    display:none;
+}
+
+.item {
+    font-size: 1.5em;
+}
