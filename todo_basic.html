@@ -10,14 +10,32 @@
         <div class="jumbotron custom-background">
             <input id='item-input' class="item-input" placeholder='Enter item to do'>
         </div>
-        <br>
-        <div class="container">
+        <div class='jumbotron body-bground'>
             <div class='row'>
-                <input id='search-box' type='text' class='form-control search-box' placeholder='Search'>
+                <div class='col-md-1'>
+                    <div class='row'></div>
+                    <div class='row custom-menu menu-spacing'><a href='#' id='all'>All</a></div>
+                    <div class='row custom-menu'><a href='#' id='left'>Left</a></div>
+                    <div class='row custom-menu'><a href='#' id='over'>Over</a></div>
+                    <div class='row custom-menu'><a href='#' id='me'>Me</a></div>
+                    <div class='row custom-menu'><a href='#' id='help'>Help</a></div>
+                </div>
+                <div class='col-md-11'>
+                    <div class="container">
+                        <div class='row'>
+                            <input id='search-box' type='text' class='search-box' placeholder='Search'>
+                        </div>
+                        <br>
+                        <table class='table'>
+                            <tbody id='item-table'>
+                                
+                            </tbody>
+                        </table>
+                        <ul id="list-items" class='item'>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <br>
-            <ol id="list-items" class='item'>
-            </ol>
         </div>
         <script src="todo.js"></script>
     </body>

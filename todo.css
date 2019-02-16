@@ -3,25 +3,118 @@
     border: 0px;
     font-size: 44px;
     display: block;
-    background-color: rgb(117, 119, 122);
+    /* background-color: rgb(231, 47, 47); */
+    background-color: rgb(185, 19, 19);
     color: white;
     font-weight: bold;
     width: 100%;
+    font-family: "Comic Sans MS";
+}
+
+.custom-background {
+    /* background-color: rgb(121, 122, 117); */
+    background-color: rgb(185, 19, 19);
+    /* background-color: rgb(2, 2, 2) */
+}
+
+.close {
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+}
+
+.close:hover {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+.done{
+    text-decoration: strike-through;
+}
+
+li {
+    list-style-type: none;
+}
+
+tr{
+    font-size: 20px;
+}
+
+.body-bground {
+    background-color: white;
+}
+
+.menu-spacing {
+    padding-left: 3em;
+    background-color: grey;
+}
+
+.custom-menu {
+    background-color:rgb(185, 19, 19);
+    color: white;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 22px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: -2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+}
+
+.custom-menu:hover {
+    background-color:rgb(112, 104, 104);
+    color: white;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 22px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: -2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
 }
 
 ::-webkit-input-placeholder{
     color: white;
-    text-align: center;
+    /* text-align: center; */
+    /* font-style: italic; */
+    font-family: "Comic Sans MS";
 }
 
-.custom-background {
-    background-color: rgb(117, 119, 122);
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .search-box {
     border: 1px solid grey;
-    outline: 0px;
+    font-family: "Comic Sans MS";
+    width: 100%;
+    border-radius: 5px;
+    height: 3em;
+    padding-left: 1em;
+    /* background-color: rgb(224, 83, 83); */
 }
+
+.search-box::-webkit-input-placeholder {
+    color: grey;
+}
+
 input:focus {
     outline: none;
 }
