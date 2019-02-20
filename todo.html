@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To Do Advanced</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="todo_v2.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src='http://icons.iconarchive.com/icons/blackvariant/button-ui-requests-5/1024/ToDo-List-icon.png' height='30' width='30'>To-Do</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class='nav-item'>
+                        <a onclick='showAddSection()' class="nav-link" href="#">Add Item</a>
+                    </li>
+                    <li class="nav-item">
+                      <a onclick='showViewSection()' class="nav-link" href="#">View Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <label><b>Welcome Sreelakshmi</b></label>
+                  </form>
+                </div>
+              </nav>
+
+    <div class='custom-margin'>
+        <div id="add">
+            <!-- <div class='row'>
+                <button id='viewItems' type='button' class='btn btn-default btn-primary'>
+                    <label class='custom-label'>View List</label>
+                </button>
+            </div> -->
+            
+            <div class='row'>
+                <textarea type='text' rows='4' class='form-control custom-input' placeholder='enter item to do'></textarea>
+            </div>
+            <br>
+            <div class='row'>
+                <div class='col-md'>
+                    <input id='initial_start' type='text' class='form-control custom-input' placeholder='start date'>
+                    <input id='date_start' type='date' class='form-control custom-input'>
+                </div>
+                <div class='col-md'>
+                    <input id='initial_finish' type='text' class='form-control custom-input' placeholder='finish date'>
+                    <input id='date_finish' type='date' class='form-control custom-input'>
+                </div>
+                <div class='col-md'>
+                    <input id='priority' type='text' class='form-control custom-input' placeholder='priority'>
+                    <select id='select-priority' class='form-control'>
+                        <option>Select</option>
+                        <option>Low</option>
+                        <option>Medium</option>
+                        <option>High</option>
+                    </select>
+                </div>
+
+            </div>
+            <br>
+            <div id='subitem-section' style='display:none'>
+                <!-- <div class='row'>
+                    <label class='custom-label'>Sub Items:</label>
+                </div>
+                <br> -->
+                <div class='row'>
+                    <div class='col-md-8'>
+                        <input type='text' row='2' class='form-control custom-input' placeholder='enter sub item'>
+                    </div>
+                    <div class='col-md-3'>
+                        <input type='text' class='form-control custom-input' placeholder='% weightage: Default = 100%'>
+                    </div>
+                    <div class='col-md-1'>
+                        <button class='btn btn-default btn-danger'>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <button class='btn btn-default btn-primary'>
+                    <label class='custom-label'>+ Sub Items</label>
+                </button>
+            </div>
+            <br>
+            <div id='comments-section'>
+                <div class='row'>
+                    <textarea class='form-control custom-input' placeholder='enter comments' rows='5'></textarea>
+                </div>
+                <br>
+            </div>
+            <br>
+            <div class='row'>
+                <button class='btn btn-default btn-success btn-block'>
+                    <label class='custom-label-main'>Add Item</label>
+                </button>
+            </div>
+
+            <!-- <div id='edit-section'>
+            <br>
+            <div id='update-section'>
+                    <div class='row'>
+                            <textarea type='text' rows='7' class='form-control custom-input' placeholder='Updates'></textarea>
+                        </div>
+                        <br>
+                <div></div>
+            </div>
+            
+                
+                <br>
+                <div class='row'>
+                    <button type='button' class='btn btn-default btn-primary btn-block'>
+                            <label class='custom-label'>Update Item</label>
+                        </button>
+                </div>
+            </div> -->
+            <br>
+            <br>
+        </div>
+        <div id="view">
+            <!-- <div class='row'>
+                <button id='addItems' class='btn btn-default btn-primary'>
+                    <label class='custom-label'>Add To Do</label>
+                </button>
+            </div> -->
+            
+            <div class='row'>
+                <div class='col-md-10'>
+                    <input id='general search' class='form-control' placeholder='Search Item'>
+                </div>
+                <div class='col-md-2'>
+                    <button class='btn btn-default btn-primary'>Advanced Search</button>
+                </div>
+            </div>
+            <br>
+            <table class='table table-hover'>
+                <thead>
+                    <th>Item</th>
+                    <th>Progress</th>
+                    <th>Time Left</th>
+                    <th>Priority</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width='55%'>
+                            <div class='row'>
+                                <div class='col-md-9'>Show to do UI to Mahi. Show to do UI to Mahi. Show to do UI to Mahi. Show to do UI to Mahi.
+                                    Show to do UI to Mahi. Show to do UI to Mahi. Show to do UI to Mahi. </div>
+                                <div class='col-md-3'>
+                                    <button class='btn btn-default btn-primary' onclick='toggleView(id)' id='item_1'>View Details</button>
+                                </div>
+                            </div>
+                            <div id='item_1_details' style='display:none'>
+                                <br>
+                                <b>Sub Items:</b>
+                                <br>
+                                <span style='background-color:rgb(145, 235, 145)'>1. Ask how it is</span>
+                                <br>
+                                <span style='background-color:yellow'>2. Ask what is left</span>
+                                <br>
+                                <br>
+                                <b>Comments:</b>
+                                <br>Ensure to complete the styles for all this.</div>
+                        </td>
+                        <td>70 %</td>
+                        <td>2 days</td>
+                        <td>Medium</td>
+                        <td width='20%'>
+                            <div class='row'>
+
+                                <div class='col-md-6'>
+                                    <button class='btn btn-default btn-success'>Update</button>
+                                </div>
+                                <div class='col-md-6'>
+                                    <div class='row'>
+                                        <button class='btn btn-default btn-danger'>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src='todo_v2.js'></script>
+</body>
+
+</html>

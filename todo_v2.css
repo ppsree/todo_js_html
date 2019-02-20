@@ -1,0 +1,28 @@
+body {
+    /* font-family: "Comic Sans MS"; */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+}
+
+.custom-margin {
+    padding: 2.5em;
+}
+
+.custom-input {
+    /* font-family: "Comic Sans MS"; */
+    /* font-size: 16px; */
+}
+
+.custom-label {
+    /* font-family: "Comic Sans MS"; */
+    /* font-size: 16px; */
+}
+
+.custom-label-main {
+    /* font-size: 20px */
+}
+
+/* .brand {
+    font-family: 'Lobster'
+    
+} */
